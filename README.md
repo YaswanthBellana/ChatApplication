@@ -28,7 +28,7 @@ LAN Messenger allows users on the same local area network (LAN) to communicate w
 2. Navigate to the project directory: `cd ChatApplication`
 3. Navigate to the server folder: `cd server`
 4. Install dependencies: `npm install`
-5. Start the server: `node app.js`
+5. Start the server: `node index.js`
 6. Open your web browser and go to `http://localhost:3000` to access the application.
 
 ## Usage
