@@ -3,8 +3,8 @@
 LAN Messenger is a simple chat application built for the course "Computer Networks" as a lab project.
 
 ## Group Members
-- [BELLANA YASWANTH](#)
-- [PAILA DILEEP SAI](#)
+- [BELLANA YASWANTH](https://www.linkedin.com/in/bellanayaswanth/)
+- [PAILA DILEEP SAI](https://www.linkedin.com/in/paila-dileep-sai-194b7222a/)
 
 ## Overview
 LAN Messenger allows users on the same local area network (LAN) to communicate with each other in real-time. It utilizes web sockets for instant messaging between clients.
@@ -24,11 +24,12 @@ LAN Messenger allows users on the same local area network (LAN) to communicate w
 - JavaScript
 
 ## Installation and Setup
-1. Clone the repository: `git clone <repository_url>`
-2. Navigate to the project directory: `cd LAN-Messenger`
-3. Install dependencies: `npm install`
-4. Start the server: `npm start`
-5. Open your web browser and go to `http://localhost:3000` to access the application.
+1. Clone the repository: ```bash git clone https://github.com/YaswanthBellana/ChatApplication.git ```
+2. Navigate to the project directory: `cd ChatApplication`
+3. Navigate to the server folder: `cd server`
+4. Install dependencies: `npm install`
+5. Start the server: `node app.js`
+6. Open your web browser and go to `http://localhost:3000` to access the application.
 
 ## Usage
 1. Enter your username and click "Join Chat".
@@ -39,7 +40,7 @@ LAN Messenger allows users on the same local area network (LAN) to communicate w
 Contributions are welcome! If you'd like to contribute to this project, please fork the repository and submit a pull request.
 
 ## License
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [IIIT Kalyani License]().
 
 ## Acknowledgements
 - This project was completed as part of the "Computer Networks" course.
