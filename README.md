@@ -24,7 +24,7 @@ LAN Messenger allows users on the same local area network (LAN) to communicate w
 - JavaScript
 
 ## Installation and Setup
-1. Clone the repository: ```bash git clone https://github.com/YaswanthBellana/ChatApplication.git ```
+1. Clone the repository: `git clone https://github.com/YaswanthBellana/ChatApplication.git`
 2. Navigate to the project directory: `cd ChatApplication`
 3. Navigate to the server folder: `cd server`
 4. Install dependencies: `npm install`
