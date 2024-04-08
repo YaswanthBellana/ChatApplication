@@ -36,8 +36,7 @@ io.on('connection', socket => {
     socket.on('chatMessage', (msg, recipientUsername) => {
         const recipientSocketId = Object.keys(users).find(key => users[key] === recipientUsername);
         if (recipientSocketId) {
-            const encryptedMsg = encryptMessage(msg);
-            io.to(recipientSocketId).emit('chatMessage', encryptedMsg, socket.id);
+            io.to(recipientSocketId).emit('chatMessage', msg, users[socket.id]);
             console.log(`Message sent from ${socket.id} to ${recipientSocketId}`);
         } else {
             console.log(`Recipient socket for ${recipientUsername} not found`);
@@ -50,7 +49,7 @@ server.listen(PORT, () => {
 });
 
 function encryptMessage(msg) {
-    const cipher = crypto.createCipher('aes-256-cbc', 'mySecretKey');
+    const cipher = crypto.createCipher('aes-256-cbc', '25');
     let encrypted = cipher.update(msg, 'utf8', 'hex');
     encrypted += cipher.final('hex');
     return encrypted;
