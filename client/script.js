@@ -5,13 +5,35 @@ function joinChat() {
     socket.emit('join', username);
 }
 
+function decrypt(text, key=255) {
+    let result = '';
+    for (let i = 0; i < text.length; i++) {
+      let charCode = text.charCodeAt(i) ^ key.charCodeAt(0);
+      result += String.fromCharCode(charCode);
+    }
+    return result;
+}
+function encrypt(text, key=255) {
+    let result = '';
+    for (let i = 0; i < text.length; i++) {
+      let charCode = text.charCodeAt(i) ^ key.charCodeAt(0);
+      result += String.fromCharCode(charCode);
+    }
+    return result;
+}
+
 socket.on('userList', (users) => {
     const userList = document.getElementById('recipient');
+    // const list = document.getElementById('userList');
+    
     userList.innerHTML = '<option value="">Select a user</option>';
     for (const user of users) {
         const option = document.createElement('option');
+        // const p = document.createElement('p');
         option.value = user;
         option.text = user;
+        // p.textContent = user;
+        // list.appendChild(p);
         userList.appendChild(option);
     }
 });

@@ -48,9 +48,11 @@ server.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
 
-function encryptMessage(msg) {
-    const cipher = crypto.createCipher('aes-256-cbc', '25');
-    let encrypted = cipher.update(msg, 'utf8', 'hex');
-    encrypted += cipher.final('hex');
-    return encrypted;
-}
+function encrypt(text, key=255) {
+    let result = '';
+    for (let i = 0; i < text.length; i++) {
+      let charCode = text.charCodeAt(i) ^ key.charCodeAt(0);
+      result += String.fromCharCode(charCode);
+    }
+    return result;
+  }
